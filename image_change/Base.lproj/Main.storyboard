@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -25,29 +26,50 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nuv-MQ-bRL">
-                                <rect key="frame" x="157" y="531" width="100" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="beI-vU-7Lu"/>
-                                    <constraint firstAttribute="height" constant="30" id="znj-ij-DZT"/>
-                                </constraints>
+                                <rect key="frame" x="148" y="481" width="118" height="30"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                 <state key="normal" title="再生"/>
                                 <connections>
                                     <action selector="tappedButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qxn-qZ-6qH"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kea-AA-aJN">
+                                <rect key="frame" x="276" y="481" width="118" height="30"/>
+                                <state key="normal" title="進む"/>
+                                <connections>
+                                    <action selector="tappedNextButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WxC-kd-lYQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eJa-Rf-cIv">
+                                <rect key="frame" x="20" y="481" width="118" height="30"/>
+                                <state key="normal" title="戻る"/>
+                                <connections>
+                                    <action selector="tappedPrevButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EX8-Ss-5iO"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="nuv-MQ-bRL" firstAttribute="top" secondItem="RIY-B2-Lkb" secondAttribute="bottom" constant="80" id="2iE-IV-t7f"/>
+                            <constraint firstItem="kea-AA-aJN" firstAttribute="centerY" secondItem="eJa-Rf-cIv" secondAttribute="centerY" id="3oy-i3-1R9"/>
+                            <constraint firstItem="eJa-Rf-cIv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="53y-Bd-r8B"/>
                             <constraint firstItem="RIY-B2-Lkb" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="60K-hf-h8g"/>
-                            <constraint firstItem="nuv-MQ-bRL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="AxX-8T-R7m"/>
+                            <constraint firstItem="kea-AA-aJN" firstAttribute="height" secondItem="eJa-Rf-cIv" secondAttribute="height" id="7U0-DO-Bpg"/>
+                            <constraint firstItem="kea-AA-aJN" firstAttribute="width" secondItem="eJa-Rf-cIv" secondAttribute="width" id="S0T-Se-gPB"/>
+                            <constraint firstItem="nuv-MQ-bRL" firstAttribute="height" secondItem="eJa-Rf-cIv" secondAttribute="height" id="Udj-nh-fZT"/>
+                            <constraint firstItem="kea-AA-aJN" firstAttribute="leading" secondItem="nuv-MQ-bRL" secondAttribute="trailing" constant="10" id="Ug1-63-A4S"/>
+                            <constraint firstItem="eJa-Rf-cIv" firstAttribute="top" secondItem="RIY-B2-Lkb" secondAttribute="bottom" constant="30" id="XOG-Vs-T08"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="kea-AA-aJN" secondAttribute="trailing" id="blz-nq-tww"/>
+                            <constraint firstItem="nuv-MQ-bRL" firstAttribute="width" secondItem="eJa-Rf-cIv" secondAttribute="width" id="cf5-Z6-skl"/>
                             <constraint firstItem="RIY-B2-Lkb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lFU-iw-YYM"/>
+                            <constraint firstItem="nuv-MQ-bRL" firstAttribute="leading" secondItem="eJa-Rf-cIv" secondAttribute="trailing" constant="10" id="nQS-zW-zm7"/>
+                            <constraint firstItem="nuv-MQ-bRL" firstAttribute="centerY" secondItem="eJa-Rf-cIv" secondAttribute="centerY" id="tmo-7C-3D7"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
                         <outlet property="imageView" destination="RIY-B2-Lkb" id="P8q-9f-fdL"/>
+                        <outlet property="nextButton" destination="kea-AA-aJN" id="UdB-k5-Xcy"/>
+                        <outlet property="prevButton" destination="eJa-Rf-cIv" id="veM-eX-Z1D"/>
                         <outlet property="startButton" destination="nuv-MQ-bRL" id="pJp-5M-56C"/>
                     </connections>
                 </viewController>
